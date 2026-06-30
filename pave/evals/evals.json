@@ -1,0 +1,41 @@
+{
+  "skill_name": "pave",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Check what directories are currently registered in PATH using pave",
+      "expected_output": "Runs `pave list` and outputs all directories currently registered in PATH.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Find where the python executable is located in PATH",
+      "expected_output": "Runs `pave search python` and finds the path of the python executable.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Add C:\\Users\\me\\.cargo\\bin to PATH and tell me how to configure it for zsh",
+      "expected_output": "Runs `pave add C:\\Users\\me\\.cargo\\bin` to add it to PATH, then explains how to apply the shell config using `pave env zsh` in .zshrc.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I want to add the current directory to PATH. Run pave add .",
+      "expected_output": "Runs `pave add .` to add the current directory to PATH. May print a warning if already added.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Search for where the rustup executable is and add it to PATH",
+      "expected_output": "Runs `pave add rustup` to search by executable name and adds the discovered directory to PATH. May show an interactive picker if multiple results are found.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "What config do I need to add to config.fish to use pave with Fish shell?",
+      "expected_output": "Explains how to add 'set -gx PATH (pave env fish)' to ~/.config/fish/config.fish.",
+      "files": []
+    }
+  ]
+}
